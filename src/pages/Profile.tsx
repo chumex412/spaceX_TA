@@ -1,4 +1,5 @@
-import { Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useAuthContext from '../application/controllers/useAuthContext';
 import { Logo } from '../assets';
 import { ProfileDetailsContainer } from '../containers';
@@ -6,10 +7,13 @@ import { Notification } from '../components/module/profile';
 
 const Profile = () => {
 	const { authState } = useAuthContext();
+	const navigate = useNavigate();
 
-	if (!authState.email) {
-		return <Navigate to="/login" replace />;
-	}
+	useEffect(() => {
+		if (!authState.email) {
+			navigate('/login');
+		}
+	}, [authState.email, navigate]);
 
 	return (
 		<>

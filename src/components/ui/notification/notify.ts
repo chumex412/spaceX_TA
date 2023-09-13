@@ -9,14 +9,14 @@ const notify = (text: string, action: 'success' | 'error') => {
 
 	if (action === 'success') {
 		toast.success(text, {
-			className: `text-dark px-4 py-2 bg-gray-500`,
+			className: `text-gray-700 px-4 py-2 bg-gray-50`,
 			...otherProps
 		});
 	}
 
 	if (action === 'error') {
 		toast.error(text, {
-			className: 'text-dark error px-4 py-2',
+			className: 'text-gray-700 error px-4 py-2',
 			...otherProps
 		});
 	}

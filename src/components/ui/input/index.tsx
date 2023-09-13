@@ -12,7 +12,10 @@ const Input = memo(
 			<section>
 				<label className="text-base font-medium leading-5 text-gray-700">{label}</label>
 				<div className="relative">
-					<input className="w-full rounded-lg border border-gray-700 p-5 text-base leading-5" {...otherProps} />
+					<input
+						className="w-full rounded-lg border border-gray-700 p-5 text-base leading-5 text-gray-700"
+						{...otherProps}
+					/>
 					{icon ? (
 						<button type="button" className="absolute right-5 top-1/2 -translate-y-1/2" onClick={onclick}>
 							{icon()}

@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { PrimaryButton, Input } from '../components/ui';
 import { EyeIcon } from '../assets';
 import useAuthContext from '../application/controllers/useAuthContext';
@@ -9,6 +10,8 @@ const LoginFormContainer = () => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	const { authDispatch } = useAuthContext();
+
+	const navigate = useNavigate();
 
 	const updateInputs = useCallback(
 		(e: ChangeEvent<HTMLInputElement>) => {
@@ -51,6 +54,7 @@ const LoginFormContainer = () => {
 
 		authDispatch({ type: 'auth/login', payload: { email, password } });
 		notify('Login successful', 'success');
+		navigate('/profile');
 	};
 
 	return (

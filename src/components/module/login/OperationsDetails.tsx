@@ -14,7 +14,7 @@ const OperationsDetails = () => {
 				<section className="flex flex-col gap-y-12 py-16">
 					{operationDetails.map((operation) => {
 						const { title, info, Icon } = operation;
-						return <OperationsInfo title={title} info={info} Icon={Icon} highlighted={false} />;
+						return <OperationsInfo title={title} key={title} info={info} Icon={Icon} highlighted={false} />;
 					})}
 				</section>
 			</div>

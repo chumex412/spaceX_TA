@@ -12,7 +12,7 @@ const Notification = () => {
 				<section className="mb-6 flex flex-col gap-y-4 bg-white px-6 py-5">
 					{celebrationDetails.map((celebration) => {
 						const { smiley, Frame } = celebration;
-						return <Celebration smiley={smiley} Frame={Frame} />;
+						return <Celebration smiley={smiley} key={smiley} Frame={Frame} />;
 					})}
 				</section>
 				<section className="text-center">
