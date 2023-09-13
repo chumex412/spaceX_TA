@@ -16,4 +16,6 @@ export type OperationPropTypes<N> = {
 	info: string;
 	Icon: N;
 	highlighted: boolean;
+	onhover: () => void;
+	onleave: () => void;
 };
