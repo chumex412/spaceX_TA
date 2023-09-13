@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: 255 232 235;
+    --secondary-color: 28 197 120;
+    --gray-100: 163 163 163;
+    --gray-200: 133 133 133;
+    --gray-300: 89 89 89;
+    --gray-700: 26 26 26;
+    --red-100: 254 235 238;
+    --red-500: 230 10 43;
+    --white: 255 255 255;
+
+
+    --type-scale: 0.8;
+		--sm: calc(var(--type-scale) * 0.75rem);
+		--base: calc(var(--type-scale) * 1rem);
+		--md: calc(var(--type-scale) * 1.5rem);
+		--lg: calc(var(--type-scale) * 2rem);
+
+    --slh: 120%;
+		--llh: 150%;
+  }
+
+  body {
+    font-family: theme('fontFamily.manrope');
+  }
+
+  @media only screen and (min-width: 768px) {
+		:root {
+			--type-scale: 0.9;
+		}
+	}
+
+	@media only screen and (min-width: 1140px) {
+		:root {
+			--type-scale: 1;
+		}
+	}
+}
+
+@layer components {
+	.container {
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+}
