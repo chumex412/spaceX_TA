@@ -19,16 +19,17 @@ export default {
 				'2xl': '1140px',
 				// => @media (min-width: 1280px) { ... }
 
-				'3xl': '1210px'
+				'3xl': '1210px',
 				// => @media (min-width: 1536px) { ... }
 
-				//'3xl': '1390px'
+				'4xl': '1360px'
 			},
 			fontFamily: {
 				manrope: ['Manrope Variable', 'sans-serif']
 			},
 			colors: {
 				gray: {
+					50: 'rgb(var(--gray-50) / 1)',
 					100: 'rgb(var(--gray-100) / 1)',
 					200: 'rgb(var(--gray-200) / 1)',
 					300: 'rgb(var(--gray-300) / 1)',

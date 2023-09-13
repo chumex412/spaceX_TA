@@ -1,4 +1,4 @@
-import { BusinessesIcon, EarningsIcon, StaffIcon } from '../assets';
+import { BusinessesIcon, EarningsIcon, StaffIcon, TextFrame } from '../assets';
 
 export const operationDetails = [
 	{
@@ -16,4 +16,10 @@ export const operationDetails = [
 		info: 'Easily see how much your businesses are earning  on each transaction and watch your earnings rise.',
 		Icon: StaffIcon
 	}
+];
+
+export const celebrationDetails = [
+	{ smiley: '🎉', Frame: TextFrame },
+	{ smiley: '✨', Frame: TextFrame },
+	{ smiley: '💥', Frame: TextFrame }
 ];

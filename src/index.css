@@ -4,8 +4,10 @@
 
 @layer base {
   :root {
+    color: rgb(247, 247, 247);
     --primary-color: 255 232 235;
     --secondary-color: 28 197 120;
+    --gray-50: 247 247 247;
     --gray-100: 163 163 163;
     --gray-200: 133 133 133;
     --gray-300: 89 89 89;
@@ -47,4 +49,30 @@
 		margin: 0 auto;
 		padding: 0 1rem;
 	}
+
+  .company-initials {
+    height: 40px;
+    width: 40px;
+    position: relative;
+  }
+
+  .company-initials > span {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid theme('colors.white');
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 98%;
+    width: 98%;
+    background-color: theme('colors.primary');
+    z-index: -1;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .company-initials {
+      height: 68px;
+      width: 68px;
+    }
+  }
 }
